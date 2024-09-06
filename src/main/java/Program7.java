@@ -1,30 +1,47 @@
-package src.main.java;
 //import stuff here
-
+import java.util.Scanner; //This imports the console scanner that reads user input
 //Your code here
+public class Program7
+{
+    public static void main(String[] args){
+        Scanner myScanner = new Scanner(System.in);
 
-public class Program7{
-	//Define your final variables here
-	// **HINT: Maybe the conversion rates?????**
-
-
-	public static void main(String[] args){
-		//Make you own test code here
-		Program7 tester = new Program7();
-		
-		double myTestVal = 0.0;
-		
-		myTestVal = tester.convertMoney(0,0,0);
-		
-		System.out.println(myTestVal);
-	}
-	
-	
-	
-	public double convertMoney(int schruteBucks, int stanleyNickels, int klevins){
-		//implement a function that converts from the old format to the new format
-		
-	}
-	
-	
+        double stanleyNickel = 1/240.0;
+        double klevin = 1/20.0;
+        double schruteBuck = 1;
+        
+        
+        double amtKlevin = 0;
+        double amtBuck = 0;
+        double amtNickel = 0;
+        
+        System.out.println("Enter schrute-bucks: ");
+        amtBuck = myScanner.nextDouble();
+        
+        System.out.println("Enter klevin: ");
+        amtKlevin = myScanner.nextDouble();
+        
+        System.out.println("Enter Nickels: ");
+        amtNickel = myScanner.nextDouble();
+        
+        double finalBuck = (schruteBuck*amtBuck+amtKlevin*klevin+amtNickel*stanleyNickel);// hakuna matata
+        double total = (double) Math.round(finalBuck*100)/100;
+        System.out.println(total);
+        
+        
+        
+    }
 }
+//Paste console output below:
+/*Enter schrute-bucks: 
+7
+Enter klevin: 
+17
+Enter Nickels: 
+9
+7.89
+/*
+/*
+
+
+*/
